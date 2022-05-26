@@ -5,7 +5,12 @@
 .d-flex {
     display: flex;
 }
-
+.just-content-sb{
+    justify-content: space-between;
+}
+.align-item-c{
+    align-items: center;
+}
 /* Start Flex */
 
 /* Start Margin and Padding */
@@ -16,12 +21,17 @@
 .p-0 {
     padding: 0;
 }
-
 /* End Margin and Padding */
 
 /* Start List */
 .list-unstyled {
     list-style: none;
 }
-
 /* End Lis t*/
+
+/* Start Boarder */
+.border-none{
+    border: none;
+
+}
+/* End Boarder */

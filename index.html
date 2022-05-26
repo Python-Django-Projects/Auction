@@ -11,21 +11,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-    <div class="page-header d-flex">
-        <h3 class="m-0">Auction</h3>
-        <div class="search">Search</div>
+    <div class="page-header">
+        <div class="container d-flex just-content-sb align-item-c">
+            <h3 class="m-0">Auction</h3>
+        <form class="search d-flex">
+          <select name="category" class="categories border-none" >
+              <option value="">Choose Category</option>
+              <option value="1">Cars</option>
+              <option value="2">Building</option>
+              <option value="3">Watches</option>
+          </select>
+            <input class="border-none" type="text" name="item" placeholder="Type A Word">
+            <input class="border-none" type="submit" value="S">
+        </form>
+        </div>
     </div>
-    <ul class="navigation m-0 p-0 list-unstyled">
+    <ul class="navigation m-0  list-unstyled d-flex">
         <li>Home</li>
         <li>Categories</li>
         <li>Services</li>
         <li>Contact</li>
     </ul>
+    <script src="main.js"></script>
 </body>
 
 </html>
-<!-- 28:26 -->

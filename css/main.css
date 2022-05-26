@@ -1,3 +1,7 @@
+:root{
+    --primary-color: rgba(18, 25, 123, 0.983);
+    --secondary-color: #484848;
+}
 * {
     box-sizing: border-box;
     /* we can add here margin :0; instead of using it in .page-header h3{}*/
@@ -10,15 +14,110 @@ body {
 
 }
 
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    } 
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+
+
+/* Start Header */
 .page-header {
-    background-color: #F8F8F8;
+    background-color: #ffffff;
     justify-content: space-between;
     padding: 20px;
     align-items: center;
     /* I think align-items is extra */
 }
 
+.page-header .search .categories { 
 
-.page-header .search {}
+    padding: 10px 20px;
+    border: 0.1px solid gainsboro;
+    border-radius: 20px 0 0 20px;
+    height: 38px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 42px;
+}
+.page-header .search .categories:focus{
+    outline: none;
+}
 
-.navigation {}
+.page-header .search input[type="text"] {
+    padding: 10px 20px;
+    border: 0.1px solid gainsboro;
+    border-radius: 0 20px 20px 0;
+    height: 42px;
+    /* margin-left: -4px; */
+    /* height: 38px; */
+    /* margin-left: 0.1px; */
+}
+.page-header .search input[type="text"]::placeholder{
+    transition: 0.3s;
+}
+
+.page-header .search input[type="text"]:focus{
+    outline: none;
+   
+}
+
+.page-header .search input[type="text"]:focus::placeholder{
+opacity: 0;   
+}
+
+.page-header .search input[type="submit"] {
+    padding: 10px;
+    border: 0.1px solid gainsboro;
+    height: 38px;
+margin: 2px;
+    width: 38px;
+    border-radius: 50%;
+    margin-left: -40px;
+    background-color: var(--primary-color);
+    /* background-color: var(--secondary-color); */
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* .page-header .search input[type="submit"]:hover{
+    background-color: var(--secondary-color);
+} */
+
+@media (max-width: 767px) {
+    .container{
+        flex-direction: column;
+    }
+    form{
+        margin-top: 10px;
+    }
+}
+.navigation {justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+/* End Header */
